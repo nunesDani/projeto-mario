@@ -1,0 +1,144 @@
+body {
+    font-family:'Poppins';
+}
+
+.cabecalho{
+    display: flex;
+    justify-content:space-between; /*pega o espaço e divide entre os elementos*/
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto; /*auto é uma das formas de centralizar*/
+}
+
+.cabecalho .logo{ /*estilizando tudo dentro da classe LOGO dentro de CABECALHO*/
+    width: 65px;
+} 
+
+.cabecalho .menu{ /*estilizando tudo dentro da classe MENU dentro de CABECALHO*/
+    display: flex; 
+    align-items: center;
+    height: 100%;
+}
+
+.cabecalho nav li a { /*estilizando o A dentro da LI dentro da NAV dentro da clase cabecalho*/
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    padding: 10px 20px; /*espaçamento interno do conteúdo até as bordas de 10px cima baixo e 20px dos lados*/
+    border-radius: 50px; /*arredondamento das bordas/funciona com hover*/
+    transition: 0.2s; /*tempo para a mudança de cor com o hover*/
+}
+
+.cabecalho nav li a:hover {
+    /*hover é uma pseudoclasse*/
+    background-color: #d5011d; /*cor que mudará quando o mouse passar por cima*/
+
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 132px); /*100 porcento da tela*/
+    padding: 0 30px 30px; /*0 de espaçamento em cima, 30 embaixo e 30 dos lados*/
+}
+
+.container .imagem-titulo{
+    max-width: 500px;
+}
+
+.container .descricao{
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.container .botao{
+    background-color: #ff0021;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s all ease-in-out;
+}
+
+.container .botao:hover{
+    transform: scale(1.1);
+}
+
+.fundo-video{
+    background-color: black;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /*esconde o transbordar que gera a barra de rolagem*/
+}
+
+.fundo-video .video {
+    height: 100vh;
+}
+
+.fundo-video::after{ /* cria um elemento HTML através do CSS depois(AFTER) do carregamento da tela*/
+    content: "";
+
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+
+}
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 52, 50, 0.749);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.conteudo-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px;
+}
+
+.fechar-modal{
+    background-color: white;
+    color: #f03a17;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.modal iframe{
+    border-width: 0;
+    width: 640px;
+    height: 360px;
+}
+
+.modal.aberto{
+    opacity: 1;
+    visibility: visible;
+}

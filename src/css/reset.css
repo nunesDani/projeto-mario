@@ -1,0 +1,14 @@
+/* Asterisco: seletor para dizer que a estilização deve ser aplicada em TODOS os elementos da tela */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none; /*reseta estilo de listas, ex: tirar bolinhas de listas*/
+}
+
+a {
+    text-decoration: none; /*tira decoração de links, ex: cor azul*/
+}
