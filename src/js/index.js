@@ -1,15 +1,12 @@
-const botaoTrailer = document.querySelector(".botao");
-const modal = document.querySelector(".modal"); // Passo 3 - pegar o elemento modal no JS pelo nome da classe
+const botaoTrailer = document.querySelector(".botao"); // pega o elemento botaoTrailer no JS pelo nome da classe
+const modal = document.querySelector(".modal"); 
 const fechaModal = document.querySelector(".fechar-modal");
 
-const video = document.getElementById("video"); // pega o elemento pelo nome do ID
+const video = document.getElementById("video"); // pega o elemento pelo nome do atributo ID
 const linkVideo = video.src;
 
-console.log(linkVideo);
-
-
 function alternarModal(){
-    modal.classList.toggle("aberto"); 
+    modal.classList.toggle("aberto"); // Toggle: se tiver, remove; se não tiver, coloca
 }
 
 //identificar quando o usuário clicar no botão e abrir a modal
@@ -24,6 +21,3 @@ fechaModal.addEventListener("click",() => {
     alternarModal();
     video.setAttribute("src","");
 });
-
-
-
